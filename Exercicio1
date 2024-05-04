@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void minimax(float v[], int n, float *a, float *b) {
+    if (n == 0) {
+        printf("Vetor vazio.\n");
+        return;
+    }
+
+    *a = *b = v[0];
+
+    for (int i = 1; i < n; ++i) {
+        if (v[i] < *a)
+            *a = v[i];
+        else if (v[i] > *b)
+            *b = v[i];
+    }
+}
+
+int main() {
+    float vetor[] = {3.4, 1.2, 5.6, 2.7, 0.9};
+    int tamanho = sizeof(vetor) / sizeof(vetor[0]);
+    float minimo, maximo;
+
+    minimax(vetor, tamanho, &minimo, &maximo);
+
+    printf("Mínimo: %.2f\n", minimo);
+    printf("Máximo: %.2f\n", maximo);
+
+    return 0;
+}
