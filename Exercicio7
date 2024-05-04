@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+void strdel(char *s, int p) {
+    int len = strlen(s);
+    
+    if (p >= 0 && p < len) {
+        memmove(s + p, s + p + 1, len - p);
+    }
+}
+
+int main() {
+    char s[] = "exemplo";
+    int p = 2;
+
+    printf("String antes: %s\n", s);
+    strdel(s, p);
+    printf("String depois: %s\n", s);
+
+    return 0;
+}
+
+
+
+
+
