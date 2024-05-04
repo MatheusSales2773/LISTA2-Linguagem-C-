@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Voo {
+    char origem[50];
+    char destino[50];
+    char data_partida[11]; 
+    char hora_partida[6]; 
+    char data_chegada[11]; 
+    char hora_chegada[6]; 
+};
+
+int main() {
+    struct Voo meuVoo;
+    strcpy(meuVoo.origem, "Nova York");
+    strcpy(meuVoo.destino, "Paris");
+    strcpy(meuVoo.data_partida, "20/05/2024");
+    strcpy(meuVoo.hora_partida, "10:30");
+    strcpy(meuVoo.data_chegada, "20/05/2024");
+    strcpy(meuVoo.hora_chegada, "15:45");
+
+    printf("Origem: %s\n", meuVoo.origem);
+    printf("Destino: %s\n", meuVoo.destino);
+    printf("Data de partida: %s\n", meuVoo.data_partida);
+    printf("Hora de partida: %s\n", meuVoo.hora_partida);
+    printf("Data de chegada: %s\n", meuVoo.data_chegada);
+    printf("Hora de chegada: %s\n", meuVoo.hora_chegada);
+
+    struct Voo outroVoo = {"Londres", "Madrid", "25/05/2024", "14:15", "25/05/2024", "17:30"};
+
+    printf("\nOrigem: %s\n", outroVoo.origem);
+    printf("Destino: %s\n", outroVoo.destino);
+    printf("Data de partida: %s\n", outroVoo.data_partida);
+    printf("Hora de partida: %s\n", outroVoo.hora_partida);
+    printf("Data de chegada: %s\n", outroVoo.data_chegada);
+    printf("Hora de chegada: %s\n", outroVoo.hora_chegada);
+
+    return 0;
+}
