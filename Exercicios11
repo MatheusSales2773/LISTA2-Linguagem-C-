@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+struct Horario {
+    int hora;
+    int minuto;
+    int segundo;
+};
+
+int main() {
+    struct Horario agora = {12, 30, 45};
+
+    printf("%02d:%02d:%02d\n", agora.hora, agora.minuto, agora.segundo);
+
+    return 0;
+}
