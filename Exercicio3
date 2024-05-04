@@ -1,0 +1,21 @@
+//Codifique a função strlen(s) , que devolve o número de caracteres armazenados na
+string s. Lembre-se de que o terminador '\0' não faz parte da string e, portanto, não deve
+ser contado.
+
+#include <stdio.h>
+
+size_t strlen(const char *s) {
+    size_t length = 0;
+    while (*s != '\0') {
+        length++;
+        s++;
+    }
+    return length;
+}
+
+int main() {
+    const char *string = "Hello, world!";
+    size_t length = strlen(string);
+    printf("O comprimento da string é: %zu\n", length);
+    return 0;
+}
