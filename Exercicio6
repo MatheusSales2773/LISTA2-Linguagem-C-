@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int strpos(const char *s, char c) {
+    int posicao = 0;
+
+    while (*s != '\0') {
+        if (*s == c) {
+            return posicao;
+        }
+        s++;
+        posicao++;
+    }
+
+    return -1; 
+}
+
+int main() {
+    const char *s = "exemplo";
+    char c = 'm';
+
+    int posicao = strpos(s, c);
+
+    if (posicao != -1) {
+        printf("Posição da primeira ocorrência de '%c' em '%s': %d\n", c, s, posicao);
+    } else {
+        printf("Caractere '%c' não encontrado em '%s'\n", c, s);
+    }
+
+    return 0;
+}
