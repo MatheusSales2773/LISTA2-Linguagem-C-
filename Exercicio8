@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+void strins(char *s, char c, int p) {
+    int len = strlen(s);
+
+    if (p >= len) {
+        s[len] = c;
+        s[len + 1] = '\0';
+    } else if (p >= 0) {
+        for (int i = len; i >= p; i--) {
+            s[i + 1] = s[i];
+        }
+        s[p] = c;
+    }
+}
+
+int main() {
+    char s[20] = "exemplo";
+    char c = 'x';
+    int p = 2;
+
+    printf("String antes: %s\n", s);
+    strins(s, c, p);
+    printf("String depois: %s\n", s);
+
+    return 0;
+}
