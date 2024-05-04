@@ -1,0 +1,18 @@
+//Codifique a função strupr(s) , que converte a string s em maiúscula. Por exemplo, se xarmazena "Teste", após a chamada strupr(x) , x estará armazenando "TESTE".
+
+#include <stdio.h>
+#include <ctype.h>
+
+void strupr(char *s) {
+    while (*s) {
+        *s = toupper((unsigned char)*s);
+        s++;
+    }
+}
+
+int main() {
+    char string[] = "Teste";
+    strupr(string);
+    printf("String em maiúsculas: %s\n", string);
+    return 0;
+}
