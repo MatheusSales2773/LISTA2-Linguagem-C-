@@ -1,6 +1,4 @@
-//Codifique a função strlen(s) , que devolve o número de caracteres armazenados na
-string s. Lembre-se de que o terminador '\0' não faz parte da string e, portanto, não deve
-ser contado.
+//Codifique a função strlen(s) , que devolve o número de caracteres armazenados na string s. Lembre-se de que o terminador '\0' não faz parte da string e, portanto, não deve ser contado.
 
 #include <stdio.h>
 
