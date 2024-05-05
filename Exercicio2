@@ -1,1 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
+int main(){
+    char palavra[100];
+
+    printf("Digite uma palavra em minuscula: ");
+    scanf("%s", palavra);
+    strupr(palavra);
+    printf("Aqui esta palavra maiscula: %s", palavra);
+
+    return 0;
+}
